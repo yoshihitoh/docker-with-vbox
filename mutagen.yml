@@ -1,0 +1,16 @@
+sync:
+  defaults:
+    mode: "two-way-resolved"
+    symlink:
+      # mode: "portable"
+      mode: "posix-raw"
+    ignore:
+      vcs: true
+      paths:
+        - "/node_modules"
+        - "/log"
+        - "/tmp"
+        - "/target"
+  app:
+    alpha: "./vm-shared/"
+    beta: "docker-vm:/home/vagrant/vm-shared"
